@@ -1,0 +1,16 @@
+{
+  "name": "jakartajs-may-2014-meetup",
+  "version": "1.0.0",
+  "author": "Hengki Sihombing <hengki.sihombing@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:aredo/jakartajs-may-2014-meetup.git"
+  },
+  "dependencies": {
+    "node-static": "latest"
+  },
+  "engines": {
+    "node": "~0.10.x"
+  }
+}

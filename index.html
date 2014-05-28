@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+
+        <title>Grunt.js - Less Painful Than You Might Think</title>
+
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <link rel="stylesheet" href="/css/font-awesome.min.css">
+
+        <link rel="stylesheet" href="/css/reveal.min.css">
+        <link rel="stylesheet" href="/css/theme/night.css" id="theme">
+        <!-- For syntax highlighting -->
+        <link rel="stylesheet" href="/lib/css/zenburn.css">
+
+        <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+        <script>
+            document.write( '<link rel="stylesheet" href="/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+        </script>
+
+        <!--[if lt IE 9]>
+        <script src="http://aredo.github.io/JakartaJS-Talk/slides/lib/js/html5shiv.js"></script>
+        <![endif]-->
+
+        <!-- SHUT UP SHUT UP SHUT UP -->
+        <style>
+        .reveal section img.puppy {
+            max-height: 400px;
+        }
+        </style>
+    </head>
+
+    <body>
+
+        <div class="reveal">
+
+            <!-- Any section element inside of this container is displayed as a slide -->
+            <div class="slides">
+                <section>
+                    <h1>Bootstraping</h1>
+                    <img src="/images/node-js-logo-large.png">
+                    <h3>using ExpressJS 4, Mongoose, Passport.js and Jade</h3>
+                    <p>&nbsp;</p>
+                    <p>
+                        <h3><a style="text-transform:capitalize; font-size:30px" href="http://hengkiardo.com">Hengki Sihombing</a></h3>
+
+                        <a href="http://twitter.com/helloandre"><i class="fa fa-twitter"> @hengkiardo</i></a>
+                        &nbsp; &nbsp; &nbsp; &nbsp;
+                        <a href="http://github.com/aredo"><i class="fa fa-github"> &nbsp;@aredo</i> </a>
+                    </p>
+                    <p>&nbsp;</p>
+                    <small>
+                        <img src="http://tukangslicing.net/img/tukangslicing-logo.png"><br /> <span class="text-dark">tukangslicing.com</span>
+                    </small>
+
+                    <small style="padding-left:30px">
+                        <img src="images/gushcloud.png" style="margin:2px 0"><br />
+                        <span class="text-dark">Gushcloud.com</span>
+                    </small>
+                </section>
+
+                <section>
+                    <h1>Node.JS</h1>
+                    <h4>Some reasons why I chose to use Node.js in this case</h4>
+                    <small>
+                        <ul style="width:70%">
+                        <li>It is very lightweight and fast.</li>
+                        <li>The counter is really easy to make to be real time.</li>
+                        <li>Node.js was easy to configure.</li>
+    <!--                     <li>There are lots of modules available for free. For example, I found a Node.js module for PayPal.
+    In this case, Node.js was an awesome choice</li> -->
+                        <li>It runs Javascript, so you can use the same language on server and client, and even share some code between them (e.g. for form validation, or to render views at either end.)</li>
+                    </ul>
+                    </small>
+                    <img src="https://i.cloudup.com/7e41sY2JJ6.png">
+                </section>
+
+
+                <section>
+                    <h1>Express.JS</h1>
+                    <img src="https://avatars2.githubusercontent.com/u/5658226?s=140">
+                    <p>Express is a minimal and flexible node.js web application framework, providing a robust set of features for building single and multi-page, and hybrid web applications.</p>
+                    <pre><code class="bash">npm install express</code></pre>
+                    <p>OR</p>
+                    <pre><code class="bash">$ npm install -g express-generator</code></pre>
+                </section>
+
+                <section>
+                    <img src="images/mongoosejs.png">
+                    <h2>Why Mongoose</h2>
+                    <h5>Because it provides easy-to-use methods for interacting with MongoDB. It is ORM, actually. It helps you forget about driver's query documentation, and focus on your models.</h5>
+                    <h5>Mongoose provides a straight-forward, schema-based solution to modeling your application data and includes built-in type casting, validation, query building, business logic hooks and more, out of the box.</h5>
+                    <p>Mongoose provides various functionalities which makes your life easy such as</p>
+                    <!-- <p>Data without a schema is useless. You get a document from MongoDB, what do you do with it? Read some fields? You need to know the names, types and meanings of those fields. That’s a schema.</p>
+                    <p>1.Gives you the ability to define some sort of schema which can be used as a protective layer over the schema less mongodb. Won't just let you insert any damn document</p>
+                    <p>2. It allows you to define some methods over these schemas, which can be invoked over any object which is created used in mongoose model based on this scheme. (virtuals and statics)</p>
+                    <p>3. It allows you to populate any referenced documents from another collections very easily</p>
+                    <p>4. I have never used the mongodb-native-driver, but I see all over the web that your code will be messy with callbacks if you use it.</p> -->
+
+                    <h4>others option</h4>
+                    <p> <a href="https://github.com/kissjs/node-mongoskin">
+                    Mongoskin</a>, <a href="https://github.com/mafintosh/mongojs">
+                    MongoJS</a>
+                </section>
+
+                <section>
+                    <img src="images/passport.png">
+                    <h3>Features</h3>
+                    <ul>
+                      <li>140+ authentication strategies</li>
+                      <li>Easily handle success and failure</li>
+                      <li>Supports persistent sessions</li>
+                      <li>Dynamic scope and permissions</li>
+                      <li>Pick and choose required strategies</li>
+                      <li>Implement custom strategies</li>
+                      <li>Lightweight code base</li>
+                      <li><h3>Easy to Use!!</h3></li>
+                    </ul>
+                    <pre><code class="bash">$ npm install passport</code></pre>
+                </section>
+                <section>
+                    <img src="images/passport-local.png">
+                </section>
+
+                <section>
+                    <img src="images/passport-tw.png">
+                </section>
+
+                <section>
+                    <img src="images/passport-fb.png">
+                </section>
+
+                <section>
+                    <img src="images/jade.png">
+                </section>
+
+                <section>
+                    <h2 style="color:red">WHY JADE?</h2>
+                    <h2>WHY not EJS, HANDLERBAR, MUSCTACHE</h2>
+                                        <p>I wouldn't say that one is better than the other. They are different, that's for sure, but "better" is quite relative term.
+                                        The nice thing about Jade is that you have a shorter syntax which means you can type faster. The block in Jade is pretty powerful which can help me a lot when dealing with complex HTML code.
+                                        Jade is rather clean and makes for some neat code in your views</p>
+
+                    <h3 style="color:green">Pick whatever you feel more comfortable.</h3>
+                </section>
+
+                <section>
+                    <h1>Demo Code</h1>
+                </section>
+
+                <section>
+                    <h1>Happy Coding</h1>
+                    <h1><img src="images/happy-coding.png"></h1>
+                </section>
+
+                <section>
+                    <h1>Questions?</h1>
+                </section>
+
+            </div>
+
+        </div>
+
+        <script src="/lib/js/head.min.js"></script>
+        <script src="/js/reveal.min.js"></script>
+
+        <script>
+
+            // Full list of configuration options available here:
+            // https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                history: true,
+                center: true,
+
+                transition: 'linear', // default/cube/page/concave/zoom/linear/fade/none
+
+                // Optional libraries used to extend on reveal.js
+                dependencies: [
+                    { src: '/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                    { src: '/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    { src: '/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+                ]
+            });
+
+        </script>
+
+    </body>
+</html>
